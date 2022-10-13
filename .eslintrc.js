@@ -31,6 +31,7 @@ module.exports = {
     ],
     'typescript-sort-keys/interface': 'error',
     'typescript-sort-keys/string-enum': 'error',
+    'import/prefer-default-export': 'off',
     'sort-imports': [
       'error',
       {
