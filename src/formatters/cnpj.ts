@@ -2,7 +2,7 @@ interface ICnpjOptions {
   defaultValue?: string;
 }
 
-function cnpj(value?: string | null, options?: ICnpjOptions): string {
+function cnpj(value?: string | number | null, options?: ICnpjOptions): string {
   const defaultValue = options?.defaultValue || '';
   if (!value) {
     return defaultValue;

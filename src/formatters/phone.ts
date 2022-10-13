@@ -2,14 +2,17 @@ interface IPhoneOptions {
   defaultValue?: string;
 }
 
-function phone(value?: string | null, options?: IPhoneOptions): string {
+function phone(
+  value?: string | number | null,
+  options?: IPhoneOptions,
+): string {
   const defaultValue = options?.defaultValue || '';
   if (!value) {
     return defaultValue;
   }
-  const valueClean = value.replace(/[^0-9]/g, '');
+  const valueClean = String(value).replace(/[^0-9]/g, '');
   if (valueClean.substring(0, 4) === '0800') {
-    const specialPhoneFormatted = value
+    const specialPhoneFormatted = valueClean
       .replace(/[^0-9]/g, '')
       .replace(/(\d{4})(\d)/, '$1 $2')
       .replace(/(\d{4}) (\w+)/, '$1 $2')
