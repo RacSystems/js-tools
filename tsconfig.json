@@ -10,10 +10,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "rootDir": "./src",
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "declaration": true,
+    "emitDeclarationOnly": true
   },
   "include": [
-    "src"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"
